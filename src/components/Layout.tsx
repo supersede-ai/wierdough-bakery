@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/logo-animations.css';
@@ -15,7 +14,7 @@ const Layout = ({ children, transparentHeader = false }: LayoutProps) => {
         <div className="container mx-auto flex justify-between items-center">
           <Link to="/" className="w-24">
             <img 
-              src="https://2r66v53nwmfsqes8.public.blob.vercel-storage.com/Logo-THJYQlFkccpv4bJXjsOHucdIpZS6lP.jpg" 
+              src="/logo_new.webp" 
               alt="The Rug Cafe Logo" 
               className="w-full h-auto transition-transform duration-500 ease-out opacity-0 translate-y-[-16px] animate-logo-fade-in hover:scale-110 hover:shadow-2xl hover:z-10 focus:outline-none"
               style={{ animationDelay: '200ms', animationFillMode: 'forwards' }}
@@ -71,9 +70,9 @@ const Layout = ({ children, transparentHeader = false }: LayoutProps) => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-0">
             <div className="mb-8 md:mb-0 flex flex-col items-center md:items-start">
   <img 
-    src="https://2r66v53nwmfsqes8.public.blob.vercel-storage.com/Logo-THJYQlFkccpv4bJXjsOHucdIpZS6lP.jpg" 
+    src="/logo_new.webp" 
     alt="The Rug Cafe Logo" 
-    className="w-32 h-auto mb-4 mx-auto md:mx-0 transition-transform duration-500 ease-out opacity-0 translate-y-[-16px] animate-logo-fade-in hover:scale-110 hover:shadow-2xl hover:z-10 focus:outline-none"
+    className="w-32 h-auto mb-4 mx-auto md:mx-0 transition-transform duration-500 ease-out opacity-0 translate-y-[-16px] animate-logo-fade-in hover:scale-110 hover:shadow-2xl hover:z-10 focus:outline-none invert"
     style={{ animationDelay: '200ms', animationFillMode: 'forwards' }}
   />
   <p className="text-center md:text-left font-semibold mb-2">309-311 Harrow Rd, London W9 3RG</p>

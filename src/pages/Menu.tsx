@@ -1,16 +1,12 @@
-
 import React, { useEffect } from 'react';
 import Layout from '../components/Layout';
-import EnhancedMenu from '../components/EnhancedMenu';
-import ImageGallery from '../components/ImageGallery';
 import '../styles/micro-interactions.css';
-import { initAllAnimations, addGrainTexture } from '../lib/animations';
+import { initAllAnimations } from '../lib/animations';
 
 const Menu = () => {
   // Initialize animations on component mount
   useEffect(() => {
     initAllAnimations();
-    addGrainTexture();
     
     // Cleanup on unmount
     return () => {
@@ -18,154 +14,354 @@ const Menu = () => {
     };
   }, []);
 
-  const menuSections = [
-    {
-      name: "Breakfast & Brunch",
-      description: "Served until 3pm daily",
-      items: [
-        {
-          name: "Classic Avocado Toast",
-          description: "Sourdough bread topped with smashed avocado, poached eggs, chili flakes and microgreens",
-          price: "£11.50",
-          dietary: ["V", "GF option"]
-        },
-        {
-          name: "Kimchi Cheese Toastie",
-          description: "House-made kimchi with mature cheddar and mozzarella on our artisan sourdough",
-          price: "£8.90",
-          dietary: ["V"]
-        },
-        {
-          name: "Matcha Pancakes",
-          description: "Fluffy Japanese-style pancakes with ceremonial grade matcha, served with maple syrup and seasonal fruits",
-          price: "£12.80",
-          dietary: ["V"]
-        }
-      ]
-    },
-    {
-      name: "Coffee & Tea",
-      description: "Specialty grade coffee and premium loose leaf teas",
-      items: [
-        {
-          name: "The Rug's Signature Latte",
-          description: "Our house blend with hints of chocolate and caramel, available with dairy or plant-based milks",
-          price: "£4.20",
-          dietary: ["VG option"]
-        },
-        {
-          name: "Seasonal Pour Over",
-          description: "Single-origin coffee brewed to perfection. Ask your server for this month's selection",
-          price: "£5.50",
-          dietary: ["VG"]
-        }
-      ]
-    }
-  ];
-
-  // Food gallery images
-  const galleryImages = [
-    {
-      src: 'https://2r66v53nwmfsqes8.public.blob.vercel-storage.com/photosFromInstagram2-iIiUF6so0LREToo7xXkXjNNlfd0p5G.jpg',
-      alt: 'Matcha Latte Art',
-      title: 'Matcha Latte',
-      description: 'Our signature matcha latte with house-made almond milk'
-    },
-    {
-      src: 'https://2r66v53nwmfsqes8.public.blob.vercel-storage.com/photosFromInstagram5-ziW9iStMXLMjkqjAA2uZoKGhVVEGrz.jpg',
-      alt: 'Banana Oatmeal Bowl',
-      title: 'Banana Oatmeal Bowl',
-      description: 'Organic oats with caramelized banana and seasonal berries'
-    },
-    {
-      src: 'https://2r66v53nwmfsqes8.public.blob.vercel-storage.com/photosFromInstagram6-g8B6wiehtr6aIDLcE1hlKYkLZTMKqF.jpg',
-      alt: 'Korean-Inspired Breakfast',
-      title: 'Korean Breakfast Bowl',
-      description: 'Rice bowl with kimchi, soft egg and sesame spinach'
-    },
-    {
-      src: 'https://2r66v53nwmfsqes8.public.blob.vercel-storage.com/photosFromInstagram3-ssSeDlHnRMhdbnKrA2WkFtpANoIPl2.jpg',
-      alt: 'Banana Toast with Blueberries',
-      title: 'Banana Toast',
-      description: 'Sourdough toast with banana, blueberries and honey'
-    },
-    {
-      src: 'https://2r66v53nwmfsqes8.public.blob.vercel-storage.com/photosFromInstagram8-c9MLDs8OvwKpIf7OaPDrS1jLW0A9Hl.jpg',
-      alt: 'Latte with Heart Art',
-      title: 'Signature Latte',
-      description: 'Our house blend espresso with velvety microfoam'
-    },
-    {
-      src: 'https://2r66v53nwmfsqes8.public.blob.vercel-storage.com/photosFromInstagram11-9ukr9L9k9n8qWWBx8bXPhWfJTmTadm.jpg',
-      alt: 'Iced Matcha Beverage',
-      title: 'Iced Matcha',
-      description: 'Ceremonial grade matcha over ice with oat milk'
-    }
-  ];
-
   return (
     <Layout>
-      <div className="min-h-screen bg-[#F4EFE9] text-[#514640] texture-grain">
-        {/* Hero section with parallax effect */}
-        <div className="relative py-24 overflow-hidden">
-          <div className="absolute inset-0 z-0 parallax" data-speed="0.05" style={{background: 'radial-gradient(ellipse at 60% 30%, #ffe6b8 0%, #F4EFE9 70%)'}} />
-          <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#E3833B]/10 rounded-full blur-3xl animate-pulse-slow z-0" />
-          
+      <div className="min-h-screen bg-[#F4EFE9] text-[#514640]">
+        {/* Hero section */}
+        <div className="relative py-12 md:py-16">
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl font-playfair font-bold mb-8 text-center animate-blur-in opacity-0 [animation-delay:200ms] [animation-fill-mode:forwards]">
+              <h1 className="text-4xl md:text-5xl font-playfair font-bold mb-6 text-center">
                 Our Menu
               </h1>
-              
-              <div className="mb-12">
-                <p className="text-center text-lg mb-8 animate-fade-in [animation-delay:400ms] [animation-fill-mode:forwards] opacity-0">
-                  We offer a carefully curated selection of specialty coffees and modern brunch dishes with Asian influences, 
-                  using seasonal ingredients from local suppliers.
-                </p>
+              <p className="text-center text-lg mb-4">
+                Specialty coffee, fresh juices and modern brunch dishes with Asian influences
+              </p>
+              <div className="flex flex-wrap justify-center gap-2">
+                <span className="px-3 py-1 bg-white rounded-full shadow-sm text-sm">V - Vegetarian</span>
+                <span className="px-3 py-1 bg-white rounded-full shadow-sm text-sm">VG - Vegan</span>
+                <span className="px-3 py-1 bg-white rounded-full shadow-sm text-sm">GF - Gluten Free</span>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Food gallery section */}
-        <div className="container mx-auto px-4 py-16 animate-fade-in-up opacity-0 [animation-delay:600ms] [animation-fill-mode:forwards]">
-          <h2 className="text-3xl font-playfair font-bold mb-8 text-center">Our Creations</h2>
-          <div className="max-w-6xl mx-auto">
-            <ImageGallery images={galleryImages} columns={3} />
-          </div>
-        </div>
-        
-        {/* Enhanced menu section */}
-        <div className="container mx-auto px-4 py-16">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-playfair font-bold mb-8 text-center animate-fade-in">
-              Menu Selection
-            </h2>
+        {/* Menu content - simplified, clearer layout */}
+        <div className="container mx-auto px-4 py-6 md:py-12">
+          <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
             
-            <EnhancedMenu menuSections={menuSections} />
-          </div>
-        </div>
+            {/* Drinks column */}
+            <div>
+              <div className="mb-12">
+                <h2 className="text-3xl font-playfair font-bold border-b-2 border-[#E3833B] pb-2 mb-6">Drinks</h2>
+                
+                {/* Coffee */}
+                <div className="mb-8">
+                  <h3 className="text-2xl font-semibold mb-4">Coffee</h3>
+                  <div className="space-y-3">
+                    <div className="flex justify-between">
+                      <span>Espresso <span className="text-sm text-[#514640]/70">(VG)</span></span>
+                      <span className="font-medium">£2.8</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Americano <span className="text-sm text-[#514640]/70">(VG)</span></span>
+                      <span className="font-medium">£3 / £3.2 iced</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Piccolo <span className="text-sm text-[#514640]/70">(V, VG option)</span></span>
+                      <span className="font-medium">£3.2</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Flat White <span className="text-sm text-[#514640]/70">(V, VG option)</span></span>
+                      <span className="font-medium">£3.4</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Cortado <span className="text-sm text-[#514640]/70">(V, VG option)</span></span>
+                      <span className="font-medium">£3.5</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Macchiato <span className="text-sm text-[#514640]/70">(V, VG option)</span></span>
+                      <span className="font-medium">£3.5</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Cappuccino <span className="text-sm text-[#514640]/70">(V, VG option)</span></span>
+                      <span className="font-medium">£3.6</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Latte <span className="text-sm text-[#514640]/70">(V, VG option)</span></span>
+                      <span className="font-medium">£3.6 / £4 iced</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>House Latte <span className="text-sm text-[#514640]/70">(V, VG option)</span></span>
+                      <span className="font-medium">£3.8 / £4.2 iced</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Mocha <span className="text-sm text-[#514640]/70">(V, VG option)</span></span>
+                      <span className="font-medium">£4 / £4.4 iced</span>
+                    </div>
+                    <div className="text-sm text-[#514640]/70 pt-2 border-t border-[#514640]/20">
+                      <p>Add oat milk / soy: £0.4</p>
+                      <p>Add honey / syrup: £0.2</p>
+                    </div>
+                  </div>
+                </div>
 
-        {/* Chef's note section */}
-        <div className="container mx-auto px-4 py-16 mb-16">
-          <div className="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-md hover-lift">
-            <h3 className="text-2xl font-playfair font-bold mb-4 text-[#E3833B]">A Note from Our Chef</h3>
-            <p className="text-[#514640]/80 mb-6 italic">
-              "Our menu changes with the seasons, always featuring the freshest ingredients from our trusted local suppliers. 
-              We believe in creating dishes that not only taste incredible but also tell a story – connecting traditional Asian 
-              flavors with modern London sensibilities. Every plate that leaves our kitchen is crafted with care and passion."
-            </p>
-            <div className="flex items-center">
-              <img 
-                src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=100&q=80" 
-                alt="Chef Samira" 
-                className="w-12 h-12 rounded-full object-cover mr-4" 
-              />
-              <div>
-                <p className="font-semibold">Samira Ahmed</p>
-                <p className="text-sm text-[#514640]/70">Head Chef & Founder</p>
+                {/* Specialty Drinks */}
+                <div className="mb-8">
+                  <h3 className="text-2xl font-semibold mb-4">Specialty Drinks</h3>
+                  <div className="space-y-3">
+                    <div className="flex justify-between">
+                      <span>Kyoto Matcha Latte <span className="text-sm text-[#514640]/70">(V, VG option)</span></span>
+                      <span className="font-medium">£4.5 / £5 iced</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Chai Tea Latte <span className="text-sm text-[#514640]/70">(V, VG option)</span></span>
+                      <span className="font-medium">£3.8 / £4.2 iced</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Hot Chocolate <span className="text-sm text-[#514640]/70">(V, VG option)</span></span>
+                      <span className="font-medium">£4 / £4.5 iced</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Crème Brûlée Latte <span className="text-sm text-[#514640]/70">(V, VG option)</span></span>
+                      <span className="font-medium">£4.5</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Rose Latte <span className="text-sm text-[#514640]/70">(V, VG option)</span></span>
+                      <span className="font-medium">£4.5 / £5 iced</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Caramel Cookie Latte <span className="text-sm text-[#514640]/70">(V, VG option)</span></span>
+                      <span className="font-medium">£4.5 / £5 iced</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Brown Sugar Bubble Latte / Tea <span className="text-sm text-[#514640]/70">(V, VG option)</span></span>
+                      <span className="font-medium">£4.8 / £5.3 iced</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Tea */}
+                <div className="mb-8">
+                  <h3 className="text-2xl font-semibold mb-4">Tea</h3>
+                  <div className="space-y-3">
+                    <div className="flex justify-between">
+                      <span>English Breakfast <span className="text-sm text-[#514640]/70">(VG)</span></span>
+                      <span className="font-medium">£3 cup / £5 pot</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Earl Grey <span className="text-sm text-[#514640]/70">(VG)</span></span>
+                      <span className="font-medium">£3 cup / £5 pot</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Peppermint <span className="text-sm text-[#514640]/70">(VG)</span></span>
+                      <span className="font-medium">£3 cup / £5 pot</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Mao Jian Green Tea <span className="text-sm text-[#514640]/70">(VG)</span></span>
+                      <span className="font-medium">£3 cup / £5 pot</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>House Milk Tea <span className="text-sm text-[#514640]/70">(V, VG option)</span></span>
+                      <span className="font-medium">£5.5 pot</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Fresh Juices */}
+                <div className="mb-8">
+                  <h3 className="text-2xl font-semibold mb-4">Fresh Juices</h3>
+                  <div className="space-y-3">
+                    <div className="flex justify-between">
+                      <span>Orange | Red Apple | Carrot <span className="text-sm text-[#514640]/70">(VG, GF)</span></span>
+                      <span className="font-medium">£6</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Pineapple <span className="text-sm text-[#514640]/70">(VG, GF)</span></span>
+                      <span className="font-medium">£7</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Bugs Bunny <span className="text-xs text-[#514640]/70 block">(Carrot, Red Apple, Ginger)</span> <span className="text-sm text-[#514640]/70">(VG, GF)</span></span>
+                      <span className="font-medium">£6.8</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Sunny Tweety <span className="text-xs text-[#514640]/70 block">(Pineapple, Orange)</span> <span className="text-sm text-[#514640]/70">(VG, GF)</span></span>
+                      <span className="font-medium">£7.8</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Red Cheek <span className="text-xs text-[#514640]/70 block">(Beetroot, Red Apple, Ginger)</span> <span className="text-sm text-[#514640]/70">(VG, GF)</span></span>
+                      <span className="font-medium">£6.8</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Beer */}
+                <div className="mb-8">
+                  <h3 className="text-2xl font-semibold mb-4">Beer</h3>
+                  <div className="space-y-3">
+                    <div className="flex justify-between">
+                      <span>Gipsy Hill IPA 4.6% <span className="text-xs text-[#514640]/70 block">(330ml Can)</span></span>
+                      <span className="font-medium">£5.5</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Gipsy Hill Lager 4.0% <span className="text-xs text-[#514640]/70 block">(330ml Can)</span></span>
+                      <span className="font-medium">£5.3</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Gipsy Hill Alc-Free IPA <span className="text-xs text-[#514640]/70 block">(330ml Can)</span></span>
+                      <span className="font-medium">£4.8</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
+
+            {/* Food column */}
+            <div>
+              <div className="mb-12">
+                <h2 className="text-3xl font-playfair font-bold border-b-2 border-[#E3833B] pb-2 mb-6">Breakfast & Brunch</h2>
+                
+                {/* Porridge */}
+                <div className="mb-8">
+                  <h3 className="text-2xl font-semibold mb-4">Porridge</h3>
+                  <div className="space-y-3">
+                    <div className="flex justify-between">
+                      <div>
+                        <span className="font-medium">California</span>
+                        <p className="text-sm text-[#514640]/70">Topped with banana, apple, sunflower seeds, peanut butter cream</p>
+                        <span className="text-sm text-[#514640]/70">(V, VG option)</span>
+                      </div>
+                      <span className="font-medium">£7</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <div>
+                        <span className="font-medium">Istanbul</span>
+                        <p className="text-sm text-[#514640]/70">Topped with mixed berries, roasted walnuts, honey</p>
+                        <span className="text-sm text-[#514640]/70">(V)</span>
+                      </div>
+                      <span className="font-medium">£7</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <div>
+                        <span className="font-medium">Seoul</span>
+                        <p className="text-sm text-[#514640]/70">Topped with Korean kimchi, fried onion, garlic, fried egg</p>
+                        <span className="text-sm text-[#514640]/70">(V option)</span>
+                      </div>
+                      <span className="font-medium">£7.8</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Breakfast Yogurt */}
+                <div className="mb-8">
+                  <h3 className="text-2xl font-semibold mb-4">Breakfast Yogurt</h3>
+                  <div className="space-y-3">
+                    <div className="flex justify-between">
+                      <div>
+                        <span className="font-medium">Greek Yogurt Bowl</span>
+                        <p className="text-sm text-[#514640]/70">Greek yogurt topped fresh strawberry, blueberry, roasted walnuts and honey</p>
+                        <span className="text-sm text-[#514640]/70">(V, GF)</span>
+                      </div>
+                      <span className="font-medium">£4.5</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* On Toast */}
+                <div className="mb-8">
+                  <h3 className="text-2xl font-semibold mb-4">On Toast</h3>
+                  <div className="space-y-3">
+                    <div className="flex justify-between">
+                      <div>
+                        <span className="font-medium">Eggs on Toast</span>
+                        <p className="text-sm text-[#514640]/70">2 scrambled or sunny eggs on sourdough toast, fresh chives, salt, black pepper</p>
+                        <span className="text-sm text-[#514640]/70">(V)</span>
+                      </div>
+                      <span className="font-medium">£7</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <div>
+                        <span className="font-medium">Banana on Toast</span>
+                        <p className="text-sm text-[#514640]/70">Caramalised banana, peanut butter cream, roasted oat and walnuts, fresh blueberry</p>
+                        <span className="text-sm text-[#514640]/70">(V, VG option)</span>
+                      </div>
+                      <span className="font-medium">£7</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <div>
+                        <span className="font-medium">Avocado on Toast</span>
+                        <p className="text-sm text-[#514640]/70">Sliced avocado, rocket, sunflower seeds, feta cheese, evo, salt, black pepper</p>
+                        <span className="text-sm text-[#514640]/70">(V, VG option)</span>
+                      </div>
+                      <span className="font-medium">£7.8</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <div>
+                        <span className="font-medium">Salmon on Toast</span>
+                        <p className="text-sm text-[#514640]/70">Cream cheese, smoked salmon, capers, red onions, dill, fresh chives, evo, salt and black pepper</p>
+                      </div>
+                      <span className="font-medium">£7</span>
+                    </div>
+                    <div className="text-sm text-[#514640]/70 pt-2 border-t border-[#514640]/20">
+                      <p className="font-medium mb-1">Extras:</p>
+                      <p>Egg: £2, Scrambled £2.5 | Avocado: £3 | Salmon: £3</p>
+                      <p>Cheese: £1.5 | Ham: £2.5 | Rocket salad: £2 | Tuno Mayo: £3</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Rolls */}
+                <div className="mb-8">
+                  <h3 className="text-2xl font-semibold mb-4">Rolls</h3>
+                  <div className="space-y-3">
+                    <div className="flex justify-between">
+                      <span>Spanich - Feta <span className="text-sm text-[#514640]/70">(V)</span></span>
+                      <span className="font-medium">£5.5</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Pork Sausage</span>
+                      <span className="font-medium">£5.5</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Vegan Sausage <span className="text-sm text-[#514640]/70">(VG)</span></span>
+                      <span className="font-medium">£6</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* The Rug Croast */}
+                <div className="mb-8">
+                  <h3 className="text-2xl font-semibold mb-4">The Rug Croast</h3>
+                  <div className="space-y-3">
+                    <div className="flex justify-between">
+                      <span>Cheese Croast <span className="text-sm text-[#514640]/70">(V)</span></span>
+                      <span className="font-medium">£4.5</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Beef Tomatoes & Cheese <span className="text-sm text-[#514640]/70">(V)</span></span>
+                      <span className="font-medium">£5.5</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Turkey & Cheese & Tomatoes</span>
+                      <span className="font-medium">£6</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Ham & Cheese & Tomatoes</span>
+                      <span className="font-medium">£6.8</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Ham or Turkey & Cheese Omelet</span>
+                      <span className="font-medium">£8.8</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <div>
+                        <span>Smash Avocado & Egg & Rocket & Feta <span className="text-sm text-[#514640]/70">(V)</span></span>
+                      </div>
+                      <span className="font-medium">£9.8</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div className="max-w-3xl mx-auto text-center mt-12 mb-16">
+            <p className="text-lg font-medium mb-2">Hours</p>
+            <p className="mb-1">Monday - Saturday: 8am - 6pm</p>
+            <p className="mb-4">Sunday: 8am - 4pm</p>
+            <p className="text-lg font-medium mb-2">Location</p>
+            <p className="mb-1">309-311 Harrow Rd, London W9 3RG</p>
+            <p className="text-sm text-[#514640]/70 mt-6">Prices may vary. Please ask your server for any allergen information.</p>
           </div>
         </div>
       </div>

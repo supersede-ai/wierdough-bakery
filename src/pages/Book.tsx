@@ -24,7 +24,7 @@ const Book = () => {
         <div className="container mx-auto flex justify-between items-center">
           <Link to="/" className="w-24">
             <img 
-              src="https://2r66v53nwmfsqes8.public.blob.vercel-storage.com/Logo-THJYQlFkccpv4bJXjsOHucdIpZS6lP.jpg" 
+              src="/logo_new.webp" 
               alt="The Rug Cafe Logo" 
               className="w-full h-auto"
             />
@@ -58,7 +58,7 @@ const Book = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-8 md:mb-0">
               <img 
-                src="https://2r66v53nwmfsqes8.public.blob.vercel-storage.com/Logo-THJYQlFkccpv4bJXjsOHucdIpZS6lP.jpg" 
+                src="/logo_new.webp" 
                 alt="The Rug Cafe Logo" 
                 className="w-32 h-auto mb-4 mx-auto md:mx-0 invert"
               />
