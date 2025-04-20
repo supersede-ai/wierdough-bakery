@@ -1,0 +1,14 @@
+.animate-logo-fade-in {
+  animation: logo-fade-in 0.9s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes logo-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-16px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
