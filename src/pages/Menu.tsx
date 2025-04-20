@@ -254,9 +254,9 @@ const Menu = () => {
                       </div>
                       <span className="font-medium">£4.5</span>
                     </div>
-                  </div>
-                </div>
-
+          </div>
+        </div>
+        
                 {/* On Toast */}
                 <div className="mb-8">
                   <h3 className="text-2xl font-semibold mb-4">On Toast</h3>
@@ -316,8 +316,8 @@ const Menu = () => {
                       <span>Vegan Sausage <span className="text-sm text-[#514640]/70">(VG)</span></span>
                       <span className="font-medium">£6</span>
                     </div>
-                  </div>
-                </div>
+          </div>
+        </div>
 
                 {/* The Rug Croast */}
                 <div className="mb-8">
@@ -344,7 +344,7 @@ const Menu = () => {
                       <span className="font-medium">£8.8</span>
                     </div>
                     <div className="flex justify-between">
-                      <div>
+              <div>
                         <span>Smash Avocado & Egg & Rocket & Feta <span className="text-sm text-[#514640]/70">(V)</span></span>
                       </div>
                       <span className="font-medium">£9.8</span>
