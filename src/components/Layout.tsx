@@ -23,7 +23,7 @@ const Layout = ({ children, transparentHeader = false }: LayoutProps) => {
           <nav className="hidden md:flex space-x-10 items-center">
             <Link to="/" className="hover:text-[#E3833B] transition-colors text-lg font-medium px-2 py-1">Home</Link>
             <Link to="/menu" className="hover:text-[#E3833B] transition-colors text-lg font-medium px-2 py-1">Menu</Link>
-            <a href="#about" className="hover:text-[#E3833B] transition-colors text-lg font-medium px-2 py-1">About</a>
+            <Link to="/about" className="hover:text-[#E3833B] transition-colors text-lg font-medium px-2 py-1">About</Link>
             <Link to="/book" className="bg-[#E3833B] text-white px-7 py-3 rounded-full hover:bg-opacity-90 transition-colors font-semibold">
               Book a Table
             </Link>
@@ -53,7 +53,7 @@ const Layout = ({ children, transparentHeader = false }: LayoutProps) => {
           >
             <Link to="/" className="hover:text-[#E3833B] transition-colors" onClick={() => {document.getElementById('mobileNav').style.display = 'none';}}>Home</Link>
             <Link to="/menu" className="hover:text-[#E3833B] transition-colors" onClick={() => {document.getElementById('mobileNav').style.display = 'none';}}>Menu</Link>
-            <a href="#about" className="hover:text-[#E3833B] transition-colors" onClick={() => {document.getElementById('mobileNav').style.display = 'none';}}>About</a>
+            <Link to="/about" className="hover:text-[#E3833B] transition-colors" onClick={() => {document.getElementById('mobileNav').style.display = 'none';}}>About</Link>
             <Link to="/book" className="bg-[#E3833B] text-white px-6 py-2 rounded-full hover:bg-opacity-90 transition-colors font-semibold" onClick={() => {document.getElementById('mobileNav').style.display = 'none';}}>
               Book a Table
             </Link>
