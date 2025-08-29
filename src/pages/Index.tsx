@@ -11,7 +11,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
-import FloatingBookButton from '../components/FloatingBookButton';
+
 import ImageGallery from '../components/ImageGallery';
 import TeamSection from '../components/TeamSection';
 import InstagramFeed from '../components/InstagramFeed';
@@ -103,28 +103,19 @@ const Index = () => {
           <div className="max-w-3xl mx-auto">
             {/* Text reveal animation for main heading */}
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-playfair font-bold mb-8 animate-blur-in opacity-0" style={{animationDelay: '200ms', animationFillMode: 'forwards'}}>
-              Slow down. Sip. Savour.
+              The Finest Pastries in E17
             </h1>
             
             <p className="text-lg md:text-xl mb-12 max-w-2xl mx-auto animate-fade-in opacity-0" style={{animationDelay: '400ms', animationFillMode: 'forwards'}}>
-              Specialty coffee & modern brunch with Asian touches in a historic London pub
+              Specialty coffee & Home-made Pastries
             </p>
             
-            <div className="flex flex-col sm:flex-row justify-center sm:space-x-6 space-y-4 sm:space-y-0 animate-fade-in opacity-0" style={{animationDelay: '600ms', animationFillMode: 'forwards'}}>
-              <Link 
-                to="/book" 
-                className="bg-[#E3833B] text-white px-10 py-4 rounded-full 
-                  hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105
-                  font-semibold text-lg shadow-lg btn-hover-effect ripple-effect"
-              >
-                Book a Table
-              </Link>
-              
+            <div className="flex justify-center animate-fade-in opacity-0" style={{animationDelay: '600ms', animationFillMode: 'forwards'}}>
               <Link 
                 to="/menu" 
-                className="border-2 border-[#514640] text-[#514640] px-10 py-4 
-                  rounded-full hover:bg-[#514640] hover:text-white transition-all duration-300 
-                  transform hover:scale-105 font-semibold text-lg ripple-effect"
+                className="bg-[#E3833B] text-white px-10 py-4 
+                  rounded-full hover:bg-opacity-90 transition-all duration-300 
+                  transform hover:scale-105 font-semibold text-lg shadow-lg btn-hover-effect ripple-effect"
               >
                 View Menu
               </Link>
@@ -149,7 +140,7 @@ const Index = () => {
           <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=facearea&w=200&q=80" alt="Founder portrait" className="w-40 h-40 object-cover rounded-full shadow-lg mb-6 md:mb-0" />
           <div>
             <h2 className="text-3xl font-playfair font-bold mb-4">Our Story</h2>
-            <p className="text-lg mb-4">The Rug Café was born from a love of great coffee, community, and the vibrant flavors of London. Founded by <strong>Samira & the team</strong>, our mission is to create a welcoming space where everyone can slow down, sip, and savour the moment. Whether you're here for a quick espresso or a long brunch with friends, we hope you feel at home.</p>
+            <p className="text-lg mb-4">Wierdough Bakery was born from a love of great coffee, community, and the vibrant flavors of London. Founded by <strong>Samira & the team</strong>, our mission is to create a welcoming space where everyone can slow down, sip, and savour the moment. Whether you're here for a quick espresso or a long brunch with friends, we hope you feel at home.</p>
             <blockquote className="italic text-[#E3833B]">"We believe every cup tells a story. Thank you for being part of ours."</blockquote>
           </div>
         </div>
@@ -304,7 +295,7 @@ const Index = () => {
           {
             name: "Samira Ahmed",
             role: "Founder & Head Chef",
-            bio: "With over 15 years of culinary experience across Asia and Europe, Samira founded The Rug Café to blend her passion for specialty coffee with innovative Asian-inspired cuisine. Her commitment to quality and community has made the café a beloved local institution.",
+            bio: "With over 15 years of culinary experience across Asia and Europe, Samira founded Wierdough Bakery to blend her passion for specialty coffee with innovative Asian-inspired cuisine. Her commitment to quality and community has made the bakery a beloved local institution.",
             image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=500&q=80",
             favoriteItem: "Kimchi Cheese Toastie with our house-blend espresso"
           },
@@ -421,8 +412,7 @@ const Index = () => {
       </section>
     </Layout>
 
-    {/* Floating Book Button */}
-    <FloatingBookButton />
+
     
     {/* Newsletter Signup */}
     <NewsletterSignup delay={8000} />

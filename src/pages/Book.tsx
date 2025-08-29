@@ -22,12 +22,8 @@ const Book = () => {
     <div className="min-h-screen bg-[#F4EFE9] text-[#514640] font-inter">
       <header className="py-6 px-4 border-b border-[#514640]/10">
         <div className="container mx-auto flex justify-between items-center">
-          <Link to="/" className="w-24">
-            <img 
-              src="/logo_new.webp" 
-              alt="The Rug Cafe Logo" 
-              className="w-full h-auto"
-            />
+          <Link to="/" className="text-2xl font-bold text-gray-800 hover:text-[#E3833B] transition-colors">
+            Wierdough Bakery
           </Link>
           <nav className="hidden md:flex space-x-8 items-center">
             <Link to="/" className="hover:text-[#E3833B] transition-colors">Home</Link>
@@ -57,11 +53,7 @@ const Book = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-8 md:mb-0">
-              <img 
-                src="/logo_new.webp" 
-                alt="The Rug Cafe Logo" 
-                className="w-32 h-auto mb-4 mx-auto md:mx-0 invert"
-              />
+              <h2 className="text-3xl font-bold text-white mb-4 text-center md:text-left">Wierdough Bakery</h2>
               <p className="text-center md:text-left">309-311 Harrow Rd, London W9 3RG</p>
             </div>
             

@@ -1,4 +1,4 @@
-# Welcome to The Rug Café project
+# Welcome to Wierdough Bakery project
 
 ## Project info
 

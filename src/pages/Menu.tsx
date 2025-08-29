@@ -319,9 +319,9 @@ const Menu = () => {
           </div>
         </div>
 
-                {/* The Rug Croast */}
+                {/* Wierdough Croast */}
                 <div className="mb-8">
-                  <h3 className="text-2xl font-semibold mb-4">The Rug Croast</h3>
+                  <h3 className="text-2xl font-semibold mb-4">Wierdough Croast</h3>
                   <div className="space-y-3">
                     <div className="flex justify-between">
                       <span>Cheese Croast <span className="text-sm text-[#514640]/70">(V)</span></span>

@@ -44,7 +44,7 @@ const About = () => {
             <section className="mb-20 scroll-trigger">
               <div className="prose prose-lg max-w-none">
                 <p className="text-xl mb-8 leading-relaxed">
-                  Amid the city's rhythm, <span className="font-semibold text-[#E3833B]">the rug</span> offers a sanctuary to eat, drink, and relax. 
+                  Amid the city's rhythm, <span className="font-semibold text-[#E3833B]">Wierdough Bakery</span> offers a sanctuary to eat, drink, and relax. 
                   We bring together modern brunch with Asian flavours and a welcoming coffeehouse experience.
                 </p>
                 
@@ -61,7 +61,7 @@ const About = () => {
                 <div className="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02]">
                   <img
                     src="https://2r66v53nwmfsqes8.public.blob.vercel-storage.com/photosFromInstagram2-iIiUF6so0LREToo7xXkXjNNlfd0p5G.jpg"
-                    alt="The Rug Café interior"
+                    alt="Wierdough Bakery interior"
                     className="w-full h-80 object-cover"
                   />
                 </div>
@@ -91,7 +91,7 @@ const About = () => {
                 </p>
                 
                 <p className="text-lg mb-8 leading-relaxed">
-                  Driven by a vision to bring new life to this old pub, we started <span className="font-semibold text-[#E3833B]">the rug</span>—a place 
+                  Driven by a vision to bring new life to this old pub, we started <span className="font-semibold text-[#E3833B]">Wierdough Bakery</span>—a place 
                   for the community once again. A little oasis on Harrow Road.
                 </p>
               </div>
@@ -101,7 +101,7 @@ const About = () => {
             <section className="mb-20 scroll-trigger">
               <h2 className="text-3xl md:text-4xl font-playfair font-bold mb-8 text-center">Our Team</h2>
               <p className="text-lg mb-10 text-center max-w-2xl mx-auto">
-                The heart of <span className="font-semibold text-[#E3833B]">the rug</span> is our passionate team, committed to crafting exceptional 
+                The heart of <span className="font-semibold text-[#E3833B]">Wierdough Bakery</span> is our passionate team, committed to crafting exceptional 
                 experiences and making every visitor feel welcome.
               </p>
               
@@ -116,7 +116,7 @@ const About = () => {
                   <p className="text-center text-[#E3833B] font-medium mb-4">Founder & Head Chef</p>
                   <p className="text-center leading-relaxed">
                     With a culinary background spanning Asia and Europe, Samira brings her passion 
-                    for flavor fusion and community building to every aspect of the rug.
+                    for flavor fusion and community building to every aspect of Wierdough Bakery.
                   </p>
                   <p className="text-center mt-4 text-sm italic">
                     "My favorite: Kimchi Cheese Toastie with our house-blend espresso"
@@ -132,7 +132,7 @@ const About = () => {
                   <h3 className="font-semibold text-2xl text-center mb-2">James Wilson</h3>
                   <p className="text-center text-[#E3833B] font-medium mb-4">Head Barista</p>
                   <p className="text-center leading-relaxed">
-                    James ensures every cup served at the rug meets our exacting standards, 
+                    James ensures every cup served at Wierdough Bakery meets our exacting standards, 
                     while continuously exploring new coffee trends and techniques.
                   </p>
                   <p className="text-center mt-4 text-sm italic">

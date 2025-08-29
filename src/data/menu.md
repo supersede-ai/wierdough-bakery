@@ -113,7 +113,7 @@ Greek yogurt topped fresh strawberry, blueberry, roasted walnuts and honey - 4.5
 | Pork Sausage | 5.5 |
 | Vegan Sausage | 6 |
 
-### the rug croast
+### wierdough croast
 
 | Item | Price |
 |------|-------|

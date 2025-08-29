@@ -50,21 +50,13 @@ const Layout = ({ children, transparentHeader = false }: LayoutProps) => {
     <div className="min-h-screen bg-[#F4EFE9] text-[#514640] font-inter flex flex-col">
       <header className={`py-6 px-4 sticky top-0 z-50 bg-[#F4EFE9]/95 backdrop-blur border-b border-[#514640]/10 shadow-md transition-shadow`}>
         <div className="container mx-auto flex justify-between items-center">
-          <Link to="/" className="w-24">
-            <img 
-              src="/logo_new.webp" 
-              alt="The Rug Cafe Logo" 
-              className="w-full h-auto transition-transform duration-500 ease-out opacity-0 translate-y-[-16px] animate-logo-fade-in hover:scale-110 hover:shadow-2xl hover:z-10 focus:outline-none"
-              style={{ animationDelay: '200ms', animationFillMode: 'forwards' }}
-            />
+          <Link to="/" className="text-2xl font-bold text-[#514640] hover:text-[#E3833B] transition-colors">
+            Wierdough Bakery
           </Link>
           <nav className="hidden md:flex space-x-10 items-center">
             <Link to="/" className="hover:text-[#E3833B] transition-colors text-lg font-medium px-2 py-1">Home</Link>
             <Link to="/menu" className="hover:text-[#E3833B] transition-colors text-lg font-medium px-2 py-1">Menu</Link>
             <Link to="/about" className="hover:text-[#E3833B] transition-colors text-lg font-medium px-2 py-1">About</Link>
-            <Link to="/book" className="bg-[#E3833B] text-white px-7 py-3 rounded-full hover:bg-opacity-90 transition-colors font-semibold">
-              Book a Table
-            </Link>
           </nav>
 
           {/* Mobile menu button */}
@@ -94,13 +86,6 @@ const Layout = ({ children, transparentHeader = false }: LayoutProps) => {
             <Link to="/" className="block px-4 py-3 text-lg hover:bg-[#F4EFE9] hover:text-[#E3833B] transition-colors" onClick={closeMobileMenu}>Home</Link>
             <Link to="/menu" className="block px-4 py-3 text-lg hover:bg-[#F4EFE9] hover:text-[#E3833B] transition-colors" onClick={closeMobileMenu}>Menu</Link>
             <Link to="/about" className="block px-4 py-3 text-lg hover:bg-[#F4EFE9] hover:text-[#E3833B] transition-colors" onClick={closeMobileMenu}>About</Link>
-            <Link 
-              to="/book" 
-              className="block mt-2 mx-4 mb-2 bg-[#E3833B] text-white px-6 py-3 text-center rounded-full hover:bg-opacity-90 transition-colors font-semibold"
-              onClick={closeMobileMenu}
-            >
-              Book a Table
-            </Link>
           </div>
         </div>
       </header>
@@ -113,16 +98,11 @@ const Layout = ({ children, transparentHeader = false }: LayoutProps) => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-0">
             <div className="mb-8 md:mb-0 flex flex-col items-center md:items-start">
-              <img 
-                src="/logo_new.webp" 
-                alt="The Rug Cafe Logo" 
-                className="w-32 h-auto mb-4 mx-auto md:mx-0 transition-transform duration-500 ease-out opacity-0 translate-y-[-16px] animate-logo-fade-in hover:scale-110 hover:shadow-2xl hover:z-10 focus:outline-none invert"
-                style={{ animationDelay: '200ms', animationFillMode: 'forwards' }}
-              />
+              <h2 className="text-3xl font-bold text-white mb-4">Wierdough Bakery</h2>
               <p className="text-center md:text-left font-semibold mb-2">309-311 Harrow Rd, London W9 3RG</p>
               <div className="w-full max-w-xs md:max-w-[300px] rounded-lg shadow-lg overflow-hidden mb-2">
                 <iframe
-                  title="The Rug Cafe Map"
+                  title="Wierdough Bakery Map"
                   src="https://www.google.com/maps?q=309-311+Harrow+Rd,+London+W9+3RG&output=embed"
                   width="100%"
                   height="180"
@@ -158,7 +138,7 @@ const Layout = ({ children, transparentHeader = false }: LayoutProps) => {
           </div>
           
           <div className="mt-12 text-center text-sm text-white/70">
-            <p>© {new Date().getFullYear()} The Rug Café. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} Wierdough Bakery. All rights reserved.</p>
           </div>
         </div>
       </footer>

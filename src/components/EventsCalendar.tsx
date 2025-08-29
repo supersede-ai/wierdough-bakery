@@ -247,7 +247,7 @@ const EventsCalendar: React.FC<EventsCalendarProps> = ({ events }) => {
                       rel="noopener noreferrer"
                       className="bg-[#E3833B] text-white px-6 py-3 rounded-lg hover:bg-opacity-90 transition-colors font-semibold text-center"
                     >
-                      Book Tickets
+                      Learn More
                     </a>
                   )}
                   <button

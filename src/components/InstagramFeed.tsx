@@ -78,7 +78,7 @@ const InstagramFeed: React.FC<InstagramFeedProps> = ({ postCount = 6 }) => {
       {
         id: '8',
         imageUrl: 'https://images.unsplash.com/photo-1579494376913-9af0c980e4a7',
-        caption: 'Weekend vibes at The Rug Café ✨ #WeekendBrunch #CafeLife',
+        caption: 'Weekend vibes at Wierdough Bakery ✨ #WeekendBrunch #BakeryLife',
         likes: 143,
         permalink: 'https://www.instagram.com/therug_london/'
       }
